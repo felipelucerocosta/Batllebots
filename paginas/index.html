@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Encabezado con carrusel automático sin Bootstrap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header>
+  <div id="carouselHeader">
+    <div class="carousel-item active">
+      <img src="../img/OIP.jfif" alt="Imagen 1" />
+    </div>
+    <div class="carousel-item">
+      <img src="../img/OIP.webp" alt="Imagen 2" />
+    </div>
+    <div class="carousel-item">
+      <img src="../img/header.webp" alt="Imagen 3" />
+    </div>
+    <div class="carousel-item">
+      <img src="../img/descarga.webp" alt="Imagen 4" />
+    </div>
+
+    <!-- Controles -->
+    <button id="prevBtn" aria-label="Anterior">&#10094;</button>
+    <button id="nextBtn" aria-label="Siguiente">&#10095;</button>
+  </div>
+</header>
+
+<script src="../javascript/header.js"></script>
+
+</body>
+</html>
