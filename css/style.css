@@ -3,6 +3,7 @@ header {
   width: 100vw; /* ocupa todo el ancho de la ventana */
   overflow: hidden;
   position: relative;
+
 }
 
 .carousel-item {
@@ -18,7 +19,7 @@ header {
 
 .carousel-item.active {
   display: block;
-  opacity: 1;
+  opacity: 50%;
   position: relative;
 }
 
@@ -54,4 +55,35 @@ header {
 
 #nextBtn {
   right: 1rem;
+}
+
+body {
+  background-image: url(../img/fondo.jfif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; 
+  
+}
+.titulos-g {
+  font-size: 70px;
+  color: rgb(16, 82, 112);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.maquinas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row: auto;
+  gap: 10px;
+}
+.maquinas img{
+  border-radius: 5px;
+  border: solid 2px #420d80;
+}
+.elemento::-webkit-scrollbar {
+  display: none;
 }
