@@ -1,11 +1,31 @@
-header {
-  height: 700px;
-  width: 100vw; /* ocupa todo el ancho de la ventana */
-  overflow: hidden;
-  position: relative;
-
+/* ========== RESET BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ========== BODY Y FONDO GENERAL ========== */
+body {
+  background-image: url(../img/fondo.jfif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f1f1f;
+  line-height: 1.5;
+}
+
+/* ========== ENCABEZADO PRINCIPAL ========== */
+header {
+  height: 700px;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ========== CARRUSEL DE IMÁGENES ========== */
 .carousel-item {
   display: none;
   position: absolute;
@@ -19,7 +39,7 @@ header {
 
 .carousel-item.active {
   display: block;
-  opacity: 50%;
+  opacity: 0.5;
   position: relative;
 }
 
@@ -29,7 +49,7 @@ header {
   object-fit: cover;
 }
 
-/* Botones */
+/* ========== BOTONES DE CARRUSEL ========== */
 #prevBtn, #nextBtn {
   position: absolute;
   top: 50%;
@@ -43,6 +63,7 @@ header {
   transition: background 0.3s ease;
   font-size: 2rem;
   line-height: 1;
+  z-index: 10;
 }
 
 #prevBtn:hover, #nextBtn:hover {
@@ -57,33 +78,58 @@ header {
   right: 1rem;
 }
 
-body {
-  background-image: url(../img/fondo.jfif);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover; 
-  
-}
+/* ========== TÍTULO PRINCIPAL ========== */
 .titulos-g {
-  font-size: 70px;
-  color: rgb(16, 82, 112);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
+  font-size: 3rem;
+  color: #104f72;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  margin: 2rem 0;
 }
 
-.maquinas{
+/* ========== SECCIÓN DE ROBOTS ========== */
+.maquinas {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row: auto;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.maquinas img{
-  border-radius: 5px;
-  border: solid 2px #420d80;
+
+/* ========== TARJETAS DE ROBOTS ========== */
+.robot-card {
+  background-color: rgba(73, 11, 114, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  opacity: 75%;
+  border: solid  #104f72;
 }
+
+.robot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.robot-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #653d92;
+}
+
+.robot-card p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+/* ========== SCROLL PERSONALIZADO OPCIONAL (OCULTO) ========== */
 .elemento::-webkit-scrollbar {
   display: none;
 }
