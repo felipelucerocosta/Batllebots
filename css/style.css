@@ -90,10 +90,10 @@ header {
 /* ========== SECCIÓN DE ROBOTS ========== */
 .maquinas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 2200px;
   margin: 0 auto;
 }
 
